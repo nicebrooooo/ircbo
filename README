@@ -1,0 +1,22 @@
+# ircbo
+The whoising IRC bot. Created for learning python sockets.
+
+The ircbot.py script will find a NICK from the slave IRC servers defined in the script (Freenode, EFnet and IRCnet currently).
+The script itself contains the C2 and IRC servers' authentication information.
+
+> Set up:
+Download ircbot.py and configure the C2 variables (master, channel, botnick and password) to your liking. Not all IRC servers of the Internet work with this configuration.
+
+> Run the bot:
+$ python ircbot.py
+
+Optionally the C2 server, channel, nick to connect to C2 with and password can be provided. In this case all these parameters need to be provided in the command line as shown.
+$ python ircbot.py <C2 server> <C2 channel> <C2 nick> <C2 user password>
+
+> Then connect to the C2 channel from an IRC client to give the whois command.
+
+Retrieving the whois NICK informaton from the slave servers is done by typing at the C2 channel:
+!whois <NICK>
+
+End program by writing at C2:
+!halt
